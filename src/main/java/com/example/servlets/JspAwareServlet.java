@@ -1,5 +1,6 @@
 package com.example.servlets;
 
+import com.example.model.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,23 +13,13 @@ import java.util.List;
 @WebServlet("/jsp-example")
 public class JspAwareServlet extends HttpServlet {
 
-    class User {
-        List<String> address;
-
-        public List<String> getAddress() {
-            return address;
-        }
-
-        public void setAddress(List<String> address) {
-            this.address = address;
-        }
-    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = new User();
         user.setAddress(List.of("Address1", "Address2"));
 
-        request.setAttribute("requestKey", user);
+        request.setAttribute("employee", user);
+        request.setAttribute("testKey", "TestValue");
         request.getSession().setAttribute("sessionKey", "session value!!!");
 
         if ("request".equals(request.getParameter("where"))) {
