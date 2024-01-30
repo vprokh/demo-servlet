@@ -3,6 +3,12 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
+<!--    <error-page>-->
+<!--        <error-code>404</error-code>-->
+<!--        <location>/index.jsp</location>-->
+<!--    </error-page>-->
+
 <!--    <display-name>Quick Servlet Demo Application</display-name>-->
 
 <!--    <servlet>-->

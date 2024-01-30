@@ -71,7 +71,6 @@ public class MyFirstServlet extends HttpServlet {
         data.put(id, value);
 
         resp.getWriter().write("Data saved with ID: " + id);
-        req.setAttribute("testKey","testValue");
     }
 
 
